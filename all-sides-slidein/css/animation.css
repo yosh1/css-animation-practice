@@ -1,0 +1,56 @@
+
+/*右から左*/
+@keyframes LeftToRight {
+    0% {
+        
+        transform: translateX(-100vw);
+    }
+    100% {
+    
+        transform: translateX(100vw);
+    }
+    }
+
+/*右から左*/
+@keyframes RightToLeft {
+0% {
+
+    transform: translateX(100vw);
+}
+100% {
+
+    transform: translateX(-100vw);
+}
+}
+
+/*上から下*/
+@keyframes SlideDown {
+0% {
+
+    transform: translateY(0vh);
+}
+100% {
+
+    transform: translateY(100vh);
+}
+}
+
+/*下から上*/
+@keyframes SlideUp {
+0% {
+    transform: translateY(100vh);
+}
+100% {
+    transform: translateY(-100vh);
+}
+}
+
+
+/* How to use?
+
+{$element} {
+animation-name: RightToLeft; // animation name
+animation-duration: 2s; // animation duration(time)
+}
+
+*/

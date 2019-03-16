@@ -1,9 +1,97 @@
-body{
+body {
+    margin: 0;
+    padding: 0;
+  }
+
+#root{
     width: 100%;
     height: 100vh;
-    background-color: skyblue;
+    color: #fff;
+    font-size: 100px;
+    display: flex;
+    /* align-items: center; */
+    /* 縦方向中央揃え */
+    /* justify-content: center; */
+    /* 横方向中央揃え */
+    flex-direction: column;
+    background-color: #dedede;
+	background-image:
+	 linear-gradient(#ecebeb 50%, transparent 50%, transparent);
+	background-size: 10px 10px;
 }
 
-#frame{
-    padding: 3%;
+/* 全体 */
+#root div{
+    position: absolute;
+    box-sizing: border-box;
+
+
 }
+
+/* 上 */
+#root div:nth-child(1){
+    left: 5%;
+    top: 5%;
+    border: 6px solid #f81d9d;
+    background-color: #ec89c3;
+    background-image: radial-gradient(#eee 10%, transparent 20%), radial-gradient(#eee 10%, transparent 20%);
+    background-size: 25px 25px;
+    background-position: 0 0, 25px 25px;
+    height: 90%;
+    width: 20%;
+    z-index: 1;
+    animation: SlideDown 0.5s alternate 0.5s forwards;
+    animation-delay: 0.5s;
+
+}
+/* 右 */
+#root div:nth-child(2){
+    left: 5%;
+    top: 5%;
+    background: white;
+    border: 6px solid #5a5ae9;  
+    background-color: #fff;
+    background-image: radial-gradient(#95bdf1 10%, transparent 20%), radial-gradient(#95bdf1 10%, transparent 20%);
+    background-size: 55px 55px;
+    background-position: 0 0, 55px 55px;
+    height: 28%;
+    width: 90%;
+    z-index: 2;
+    animation: LeftToRight 0.5s alternate 0.4s forwards;
+    animation-delay: 0.8s;
+
+
+}
+/* 左 */
+#root div:nth-child(3){
+    right: 5%;
+    bottom: 5%;
+    background: white;
+    border: 6px solid #5a5ae9;  
+    background-color: #fff;
+    background-image: radial-gradient(#95bdf1 10%, transparent 20%), radial-gradient(#95bdf1 10%, transparent 20%);
+    background-size: 55px 55px;
+    background-position: 0 0, 55px 55px;
+    height: 28%;
+    width: 90%;
+    z-index: 3;
+    animation: RightToLeft 0.5s alternate 0.4s forwards;
+    animation-delay: 1.3s;
+
+}
+/* 下 */
+#root div:nth-child(4){
+    right: 5%;
+    bottom: 5%;
+    border: 6px solid #f81d9d;
+    background-color: #ec89c3;
+    background-image: radial-gradient(#eee 10%, transparent 20%), radial-gradient(#eee 10%, transparent 20%);
+    background-size: 25px 25px;
+    background-position: 0 0, 25px 25px;
+    height: 90%;
+    width: 20%;
+    z-index: 4;
+    animation: SlideUp 0.5s alternate 0.4s forwards;
+    animation-delay: 1.6s;
+}
+
