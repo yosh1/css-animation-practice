@@ -1,56 +1,75 @@
-
 /*右から左*/
 @keyframes LeftToRight {
     0% {
-        
+        opacity: 0;
         transform: translateX(-100vw);
     }
     100% {
-    
+        opacity: 1;
         transform: translateX(100vw);
     }
-    }
+}
 
 /*右から左*/
 @keyframes RightToLeft {
-0% {
-
-    transform: translateX(100vw);
-}
-100% {
-
-    transform: translateX(-100vw);
-}
+    0% {
+        opacity: 0;
+        transform: translateX(100vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-100vw);
+    }
 }
 
 /*上から下*/
 @keyframes SlideDown {
-0% {
-
-    transform: translateY(0vh);
-}
-100% {
-
-    transform: translateY(100vh);
-}
+    0% {
+       opacity: 0;
+       transform: translateY(-100vh);
+    }
+    100% {
+        opacity: 1;
+       transform: translateY(100vh);
+    }
 }
 
 /*下から上*/
 @keyframes SlideUp {
-0% {
-    transform: translateY(100vh);
-}
-100% {
-    transform: translateY(-100vh);
-}
-}
-
-
-/* How to use?
-
-{$element} {
-animation-name: RightToLeft; // animation name
-animation-duration: 2s; // animation duration(time)
+    0% {
+        opacity: 0;
+        transform: translateY(100vh);
+    }
+    100% {
+        opacity: 1;
+       transform: translateY(-100vh);
+    }
 }
 
-*/
+/* 回転 */
+@keyframes Rotation {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        opacity: 0;
+        transform: rotateZ(180deg);
+        border-radius: 500px;
+
+    }
+    100% {
+        opacity: 1;
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%,-50%);
+        -webkit-transform : translate(-50%,-50%);
+        transform : translate(-50%,-50%);
+        background-color: white;
+        border: 10px solid skyblue;
+        background-image: none;
+    }
+}
